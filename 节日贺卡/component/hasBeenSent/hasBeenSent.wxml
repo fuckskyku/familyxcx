@@ -1,0 +1,17 @@
+<view class="theText" bindlongpress="removeCard">
+    <view class="theTheme">
+        <image src="{{themeImg}}"></image>
+
+        <!-- 模态 -->
+         <view class="modal" hidden="{{iscard}}">
+        <view class="remove" bindtap="determine">
+            <image src="/images/删除.png" class="removeImg"></image>
+        </view>
+    </view>
+    </view>
+   
+    <view class="theTitle">
+        <text class="happy">{{title}}</text>
+        <text class="time">{{createTime}}</text>
+    </view>
+</view>

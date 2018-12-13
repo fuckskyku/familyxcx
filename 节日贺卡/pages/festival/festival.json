@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "请选择贺卡模板",
+  "usingComponents": {
+    "templateList": "../../component/templateList/templateList",
+    "hasBeenSent": "../../component/hasBeenSent/hasBeenSent"
+  }
+}

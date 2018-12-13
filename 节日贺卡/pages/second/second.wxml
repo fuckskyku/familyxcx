@@ -1,0 +1,56 @@
+<!-- 编辑第二步 -->
+<view class="{{showAll?'show':'hide'}}">
+  <view class="ad_popError" wx:if="{{popErrorMsg}}">{{popErrorMsg}}</view>
+  <view class="editor">
+    <text class="theFirstStep">第二步</text>
+    <!-- <view style=" margin-top: 90rpx;">
+    <text class="name">标题:</text>
+    <input class="theInput" type="text" bindinput="cardTitle" placeholder="请输入标题" />
+  </view> -->
+    <view style=" margin-top: 90rpx;">
+      <text class="name">祝福语:</text>
+      <textarea class="blessing" placeholder="请输入祝福语言(最多可输入62个字符)" bindinput="cardContent" value="{{cardContent}}" maxlength='62'></textarea>
+      <view>
+        <view class="name" style='float:left;'>自己输入祝福语或者</view>
+        <view bindtap='toTemplist' style='margin-left: 10px;float: left;color:blue;'>从列表选择祝福语</view>
+      </view>
+    </view>
+    <view style=" margin-top: 40px;margin-bottom:50px">
+      <view class="name" style="float:left;">语音祝福(按住说话):</view>
+      <view class="page-section" style="width: 100%;display: block;float: left;">
+        <view class="page-body-buttons">
+          <view wx:if="{{voice}}">
+            <view class='yy_box'>
+              <view class='yy_box_bg' bindtap='play'>
+                <view class="yy_box_icon {{onPlay?'audio-animation':''}}"></view>
+              </view>
+              <text>{{playDuration}}"</text>
+            </view>
+          </view>
+          <view class="one {{showView?'show':'hide'}}" bindtouchstart='recorderS' bindtouchend='recorderE'>
+            <image src="../../images/sound.png"></image>
+          </view>
+          <view bindtap="clear" style="width:250px;text-align:center;" class="one {{showView4?'show':'hide'}}">
+            <image src="../../images/trash.png"></image>
+          </view>
+        </view>
+      </view>
+      <view style='clear:both;'></view>
+      <view class="theNextStep" bindtap="theNextStep" style="margin-top:30px;margin-bottom:5px;">
+        <text>预览</text>
+      </view>
+      <view style='height:1px'></view>
+    </view>
+  </view>
+</view>
+<!-- 模板 -->
+<view class='bodyyy' class="{{showTemple?'show':'hide'}}">
+  <view class='cardSample'>
+    <view class='cardSampleContent' wx:for="{{data}}" wx:key="data" wx:for-index="id" wx:for-item="items" bindtap='setGreetingContent' data-content=' {{items.greetingContent}}'>
+      {{items.greetingContent}}
+    </view>
+  </view>
+  <view class="theNextStep" bindtap="closeTmplate" style="margin-left:30rpx;margin-top:35rpx;margin-bottom:30px;">
+    <text>关闭</text>
+  </view>
+</view>

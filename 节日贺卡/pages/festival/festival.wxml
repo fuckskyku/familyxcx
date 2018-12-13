@@ -1,0 +1,13 @@
+<view>
+    <view class="advertising"></view>
+    <!-- 模板区 -->
+    <view class="tab-bottom">
+        <view class="bottom-item {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+            <view class="theme">
+                <block wx:for="{{theme}}" wx:key="theme">
+                    <templateList templateUrl="{{item.templateUrl}}" theTheme="{{item}}" />
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

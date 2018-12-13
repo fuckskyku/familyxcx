@@ -1,0 +1,11 @@
+<import src="/pages/completeTheCard/completeTheCard.wxml" />
+<image class='music {{ rotate && musicClass }}' style="{{ musicStyle }}" src="{{ icon }}" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress" bindtap='_switch' wx:if="{{ music }}">
+</image>
+ <view class='{{cssDisplay}}' style='flex-direction:column;'>
+     <block wx:for="{{tasMusic}}" wx:key="tasMusic">
+    <view class="musicitem marquee_container" style="background-image:url(http://img.mseenet.com/6E5FEE1B10F19DE647456629F1CBA4E2.png?imageMogr2/strip|imageView2/1/w/200/h/200/q/85);" bindtap='changeMusic'>
+      <view class="marquee_text" data-src="{{item.musicUrl}}" data-id="{{item.id}}">{{item.musicName}}
+      </view>
+    </view>
+    </block>    
+  </view>

@@ -1,0 +1,9 @@
+.unopen{
+  text-align: center;
+  width:750rpx;
+  height:350rpx;
+  line-height:350rpx;
+  font-size:58rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500; 
+}

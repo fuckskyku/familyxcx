@@ -1,0 +1,15 @@
+<!-- pages/homepage/homepage.wxml -->
+<view class='homepage'>
+      <view class='festival'>
+            <image class="item_img" src="/images/gq.png" bindtap='NationalDay'></image>
+            <!-- <view class='NationalDay' >·    十一国庆    ·</view> -->
+      </view>
+      <view class='festival'>
+            <image class="item_img" src="/images/zq.png" bindtap='MidAutumnDay'></image>
+            <!-- <view class='MidAutumnDay' >·    中秋节    ·</view> -->
+      </view>
+      <!-- <view class='festival'>
+            <image class="item_img" src="/images/js.png" bindtap='TeachersDay'></image>
+            <view class='TeachersDay' bindtap='TeachersDay'>·    教师节    ·</view>
+      </view> -->
+</view>

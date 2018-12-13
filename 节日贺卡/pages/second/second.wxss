@@ -1,0 +1,274 @@
+/* pages/theEditor/theEditor.wxss */
+
+.editor{
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    padding-top: 50rpx;
+    border-top:1px solid #E5E5E5;
+}
+.theFirstStep{
+    font-size:42rpx;
+    font-weight:bold;
+}
+.hide{
+display: none;
+}
+.show{
+display: block;
+}
+
+.theInput{
+    border-bottom: 2px solid #E5E5E5;
+    margin-top: 59rpx;
+    padding-bottom: 29rpx;
+}
+.name{
+    font-size:36rpx;
+    color: #808080;
+    font-weight:400;
+   
+}
+.theNextStep{
+    width:690rpx;
+     height:98rpx;
+     border-radius:10px;
+     background-color: #FFEA55;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 105rpx;
+     /* position: fixed;
+     bottom: 30rpx; */
+     margin-bottom: 65rpx;
+}
+.blessing{
+    margin-top: 59rpx;
+    width:100%;
+}
+.recording{
+    width: 120rpx;
+    height: 120rpx;
+    background-color: #FFEA55;
+    position: relative; 
+    border-radius: 100rpx;
+    /* display: none; */
+}
+.recording2{
+    position: absolute;
+    top:30rpx;
+    left: 35rpx;
+}
+.recording2 image{
+   width: 55rpx;
+   height: 55rpx;
+}
+.record{
+    width: 120rpx;
+    height: 120rpx;
+    background-color: #FFEA55;
+    position: relative; 
+    border-radius: 100rpx;
+  
+}
+.record2{
+    position: absolute;
+    top:35rpx;
+    left: 35rpx;
+}
+.record image{
+   width: 55rpx;
+   height: 55rpx;
+}
+
+.speak-style{
+    position: relative;
+    height: 240rpx;
+    width: 240rpx;
+    border-radius: 20rpx;
+    margin: 50% auto;
+    background: #26A5FF;
+}
+
+.item-style{
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}
+.text-style{
+    text-align: center;
+
+}
+.record-style{
+    bottom: 0;
+    left: 0;
+    height: 120rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.record-style image{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.btn-style{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.sound-style{
+  position: absolute;
+  width: 74rpx;
+  height:150rpx;
+  margin-top: 45rpx;
+  margin-left: 83rpx;
+}
+
+/* 其他 */
+.board {
+  overflow: hidden;
+  border-bottom: 2rpx solid #26A5FF;  
+}
+/*列布局*/
+.cell{
+    display: flex;
+    margin: 20rpx;
+}
+.cell-hd{
+    margin-left: 10rpx;
+    color: #885A38;
+}
+.cell .cell-bd{
+    flex:1;
+    position: relative;
+   
+}
+/**只显示一行*/
+.date{
+    font-size: 30rpx;
+    text-overflow: ellipsis; 
+    white-space:nowrap;
+    overflow:hidden; 
+}
+
+/*录音*/
+
+.page-body-wrapper {
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-bottom: 300rpx;
+}
+.page-body-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.time-big {
+  font-size: 60rpx;
+  margin: 20rpx;
+}
+.time-small {
+  font-size: 30rpx;
+}
+
+.page-body-buttons {
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.page-body-button {
+  width: 250rpx;
+  text-align: center;
+}
+image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.button-stop-record {
+  width: 110rpx;
+  height: 110rpx;
+  border: 20rpx solid #fff;
+  background-color: #f55c23;
+  border-radius: 130rpx;
+  margin: 0 auto;
+}
+
+
+.yy_box {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+}
+.yy_box_bg {
+  width: 130px;
+  height: 30px;
+  background-color: #9eea6a;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+.yy_box_bg::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 10px solid #9eea6a;
+  border-bottom: 5px solid transparent;
+  position: relative;
+  left: -10px;
+  top: 10px;
+}
+.yy_box_icon {
+  width: 11.5px;
+  height: 14.5px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAABXCAYAAADvct7MAAAEWElEQVRYhe2Zz0sjZxjH37/iGWLe6QRHl7A4RBoliFGEtLCXRZQqrIoQ8VAICKIe0kPIQqJx/TGCxDgzeecNe1loD0tvhW6PLWwPpXR7KT0slBbEslQpsixZNj00b5h9fScz68xpNw/Mxdf388w87/M879dHhHrWsw/EAEBiT6hgRVEilNJzwzBalNJzjHE0NCe2bT83DKPlfNLpdCIUBwcHB1/ycMMwWmNjY1pgOABIuq4/5uG2bZ+F8vYAIFFKz3gHiUTiVmA4QgjlcrkcD19fX18PBT49Pf0JD9/a2voiMBgApJ2dHcLDl5eXPwsMTyQSt0QZoyhKJBBYluU+QkiTB+/t7T0KnC2Li4szgjR8HloaGobxEwMfHx9/F2qPAQAplUrdDq3se9aznvXMxQBASqfTCU3T+kNvZKenp09Zp9R1/evQHCwsLEzzPZ4Q0gxFjWGMo6LbyTCMlqZp/e8EAwCVPexnAwMDmGlI/gt8360Y40FK6WVbiF7GYrE4c9IWqS94B77PgBByTWmNj49PMAfxeDwmCk88Ho95wvf3978RbZ6amppqh0wqFosP+PVSqVT1hAOAenR09ESgAK6c4eHXKaXnnnDmwLbtCx4wPDw8yt6ej71pmi3fabm2tpbn4RsbG2W2blnWM37dN3x2dvaaOMrn87oD/uuN4ACgViqVr/jNKysrnzvC8lbY6vX6Gz/wjzRNS4oyBmM8iND/FSs40D893xpjPFiv19/wmw8PD5+0q1aqVCqUXy8Wiw884UtLS1lBiZ+xNEylUrdFXyXLcp8nHABU0zR/Y5uq1eqPDIwxjlJKX/Lg3d3dh74zBQDUZDKZmpycnGRgVVVlSumVINYXgdtuuVyuCcBXgf/aQAihoaEhlUu930O7jQBAUhQlUiqVqqurq8s93f6eGQBI7aI6o5S+ymQyo6FmT6BKfVc4KyxZlvsCOQEAaW5u7o5pmtcc+FYDTphIiGqa1i/qOYSQpt9O2VWIYoyjjUbjX96BrxbhR4hqmtZvWda1SyaXy+W6wv0K0ZmZmU8Fb//23SqaiLoJUdu2X7O2CwDSycnJ9/zvFAqFCkKo+0TUjxDlWzNLTwCQPCeiXkIUACSRYBoZGRlynYhOTEx8zDZ7CdFsNntPqA7cJqKU0n+c4RGsd4SoqHpN0/ylsyiaiCaTybhj3VWIAoBECHnNOX/RyRjRRHRzc3OLrXsJ0UajccnBX3bgooloPp+/74B3FaJ8S+jA3Sai2Wz2niMsrkK0HZYmB79ACHlPRL2EqOhALct65joR1XX9MataLyE6Pz9/l1/f3t42PSeiXkK03UF/ENZJt4moHyEqChkhpNk5bNFE1I8QdSvAcrlcQ93MjxDNZDKj3ULmal5CtB2yVzy4UChUPG+jbkIUACTbtv8QfFmw/9AoihKxbfsvQaNqYYyjNwYjhJBhGD/fKM5+rNFo/C065FCUl6IokVqt9rRdE992g/4H+ecsUNqAjLcAAAAASUVORK5CYII=) no-repeat;
+  background-size: 11.5px 43.5px;
+  background-position: 0 -29px; /* 默认第三张 */
+  position: relative;
+  left: 15px;
+  top: -2px;
+}
+.audio-animation {
+  animation: voiceplay 2s infinite step-start;
+}
+@keyframes voiceplay{
+  0%, 100%{
+    background-position: 0 -29px;
+  }
+  33.333%{
+    background-position: 0 0;
+  }
+  66.666%{
+    background-position: 0 -14.5px;
+  }
+}
+.yy_box text {
+  color: #999;
+}
+ 
+
+
+/*模板*/
+.bodyyy{
+  background:#f5f5f5;
+}
+.cardSample{
+      font-size: 26rpx;
+      width:100%;
+      height:100%;     
+      background-color:#F5F5F5;
+      border-top:1rpx solid #F5F5F5;
+}
+.cardSampleContent{
+      margin:10rpx 20rpx;
+      padding:10rpx 20rpx;
+      /* 文字溢出显示省略号 */
+  		display: -webkit-box;  
+      overflow: hidden;  
+      text-overflow: ellipsis;  
+      -webkit-line-clamp: 3;  
+      -webkit-box-orient: vertical;    
+      line-height: 48rpx;
+      /* 文字溢出显示省略号 */  
+      height: 142rpx;  
+      background:#fff;
+}

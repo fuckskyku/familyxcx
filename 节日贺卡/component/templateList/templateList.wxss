@@ -1,0 +1,14 @@
+/* component/templateList/templateList.wxss */
+
+.theTheme{
+    width: 330rpx;
+    /* height: 420rpx; */
+    background-color: #98A7AE;
+    margin-top: 30rpx;
+}
+.theTheme image{
+    display: block;
+    max-width: 100%;
+    width: 330rpx;
+    /* height: 420rpx; */
+}

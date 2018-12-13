@@ -1,0 +1,5 @@
+<view bindtap="selected">
+    <view class="theTheme">
+        <image src="{{themeImg}}"></image>
+    </view>
+</view>

@@ -1,0 +1,47 @@
+<view class="cont">
+  <view class="card" style="{{heightt}}">
+    <view style="background-image:url({{templateUrl}});height:{{heighttt}}" class="cardBackgroundimage"></view>
+  </view>
+  <!-- 音乐播放 -->
+  <image class='music {{ rotate && musicClass }}' style="{{ musicStyle }} z-index:999" src="{{ icon }}" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindtap='_switch'></image>
+  <view class='{{cssDisplay}}' style='flex-direction:column;'>
+    <block wx:for="{{tasMusic}}" wx:key="tasMusic">
+      <view class="musicitem marquee_container" style="background-image:url(http://img.mseenet.com/6E5FEE1B10F19DE647456629F1CBA4E2.png?imageMogr2/strip|imageView2/1/w/200/h/200/q/85);" bindtap='changeMusic' data-musicid="{{item.id}}" data-src="{{item.musicUrl}}">
+        <view class="marquee_text" data-src="{{item.musicUrl}}" data-musicid="{{item.id}}">
+          {{item.musicName}}
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='{{templatename}}'>
+    <view class='Ltitle'>{{receiveUserName}}：</view>
+    <view class='Lcontent' style='line-height: {{lineHeight}};'>{{content}}</view>
+    <view class='Lsenderr'>{{userName}}</view>
+  </view>
+  <view class="underlying">
+    <view class="choose-last" bindtap="again">
+      <text>重新编辑</text>
+    </view>
+
+
+    <view class='jietu' bindtap='screenshot'>
+    截图
+    <canvas canvas-id="myCanvas" style="width:{{canvasWidth}};height:{{canvasHeight}};display:{{canvasHidden}}" id="canvas"></canvas>
+  </view>
+    <button open-type="share" class="choose-next" bindtap='complate'>
+      <view>发送</view>
+    </button>
+  </view>
+</view>
+<!-- 模态框 -->
+<view class="model" hidden="{{display}}">
+  <view class="lastModal">
+    <view class="blessing">
+      <image src="/images/tp.png"></image>
+      <text style="margin-top: 21rpx;font-size:36rpx;font-family:PingFang-SC-Regular;">
+        您的心意已送达
+      </text>
+    </view>
+    <button class="homePage" bindtap="homePage">返回首页</button>
+  </view>
+</view>

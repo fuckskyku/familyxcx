@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/third/third",
+    "pages/festival/festival",
+    "pages/unopen/unopen",
+    "pages/newpage/newpage",
+    "pages/first/first",
+    "pages/second/second",
+    "pages/cardDetail/cardDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "校园贺卡",
+    "navigationBarTextStyle": "black"
+  }
+}

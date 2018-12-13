@@ -1,0 +1,18 @@
+<!-- 编辑第一步 -->
+<view class="editor">
+    <text class="theFirstStep">第一步</text>
+    <view style=" margin-top: 90rpx;">
+        <text class="name">您的名字:</text>
+        <input bindinput="studentsName" class="input1" type="text" placeholder="请输入您的名字" value="{{studentsName}}"/>
+    </view>
+    <view class="ad_popError" wx:if="{{popErrorMsg}}">{{popErrorMsg}}</view> 
+    <view style=" margin-top: 30rpx;">
+        <view style="margin-top: 59rpx;">
+            <text class="name">收信人:</text>
+            <input bindinput="teacherName" class="input1" type="text" value="{{teacherName}}"  placeholder="请输入收信人姓名或称谓"/>
+        </view>
+    </view>
+    <view class="theNextStep" bindtap="theNextStep">
+        <text>下一步</text>
+    </view>
+</view>

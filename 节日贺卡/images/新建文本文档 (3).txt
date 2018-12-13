@@ -1,0 +1,146 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="/WEB-INF/views/include/taglib.jsp" %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>教师节贺卡</title>
+    <link rel="stylesheet" href="${ctxStatic}/greetCardCss/public.min.css">
+    <link rel="stylesheet" href="${ctxStatic}/greetCardCss/greetingCard.min.css">
+    <script>
+        var clientWidth = document.documentElement.clientWidth;
+        document.getElementsByTagName("html")[0].style.fontSize = Math.floor(clientWidth / 7.5) + "px";
+    </script>
+</head>
+
+<body>
+<section id="preview">
+    <img src="" alt="" id="tp">
+    <div class="pendant">
+        <div id="tip">长按先选择音乐</div>
+        <audio src="" autoplay loop id="AudioMusic"></audio>
+        <img src="/static/img/Musicicon.png" alt="" id="MusicBtn" class="animationGO">
+        <ul id="MusicSelect" data-type="false"></ul>
+    </div>
+
+    <div class="button-group">
+        <button class="reseting" onclick="window.location.href='/api/greetingCard/index'">重新选择</button>
+        <button class="edit" onclick="window.location.href='/api/greetingCard/step'">编辑</button>
+    </div>
+
+</section>
+<script src="${ctxStatic}/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+
+    var templateUrl = '${templateUrl}';
+
+    //音乐DOM
+    var AudioMusic = $('#AudioMusic').get(0);
+    $('#tp').get(0).src = templateUrl;
+
+
+
+//    setTimeout(function () {
+//            AudioMusic.play();
+//            console.log(1)
+//    }, 5000);
+
+
+    //    //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+    //    document.addEventListener('DOMContentLoaded', function () {
+    //        function audioAutoPlay() {
+    //            AudioMusic.play();
+    //            document.addEventListener("WeixinJSBridgeReady", function () {
+    //                AudioMusic.play();
+    //            }, false);
+    //        }
+    //        audioAutoPlay();
+    //    });
+
+
+    $.ajax({
+        type: 'POST',
+        url: "/api/greetingCard/musicInfoList",
+        headers: {
+            'Authorization': 'Bearer ' + window.localStorage.getItem('token')
+        },
+        success: function (data) {
+            var ParentHtml = $('#MusicSelect');
+            var AudioMusic = $('#AudioMusic').get(0);
+            AudioMusic.src = data.data[0].musicUrl;
+
+//            var Aio = document.createElement('audio');
+//            Aio.src=data.data[0].musicUrl;
+//            Aio.setAttribute('loop',true);
+//            Aio.setAttribute('autoplay',true);
+
+
+            window.localStorage.setItem("MusicId", data.data[0].id);
+            var html = '';
+            if (data.code === 200) {
+                data.data.forEach(function (item, index) {
+                    html += '<li data-url="' + item.musicUrl + '" data-id="' + item.id + '"><img src="/static/img/Musicicon.png" alt="">' + item.musicName + '</li>';
+                });
+                ParentHtml.append(html);
+            }
+        }
+    });
+
+    $('#tip').show(500);
+    setTimeout(function () {
+        $('#tip').hide(500);
+    }, 3000);
+
+    var flag = false;
+    var timeOutEvent;
+    $('#MusicBtn').on('touchstart touchend', function (ev) {
+        if (ev.type == 'touchstart') {
+            timeOutEvent = setTimeout(function () {
+                flag = true;
+                if ($('#MusicSelect').get(0).dataset.type == 'false') {
+                    $('#MusicSelect').slideDown();
+                    $('#MusicSelect').get(0).dataset.type = 'true';
+                } else {
+                    $('#MusicSelect').get(0).dataset.type = 'false';
+                    $('#MusicSelect').slideUp();
+                }
+            }, 500);
+            ev.preventDefault();
+        } else if (ev.type == 'touchend') {
+            if (!flag) {
+                clearInterval(timeOutEvent);
+                if (!AudioMusic.paused) {
+                    AudioMusic.pause();
+                    this.src = '/static/img/MusiciconDel.png';
+                    $(this).removeClass("animationGO");
+                } else {
+                    AudioMusic.play();
+                    $(this).addClass("animationGO");
+                    this.src = '/static/img/Musicicon.png'
+                }
+                flag = false;
+                $('#MusicSelect').slideUp();
+            }
+        }
+    });
+
+    $('#MusicSelect').on('touchend', 'li', function (ev) {
+        flag = false;
+        window.localStorage.setItem("MusicId", this.dataset.id);
+        var url = this.dataset.url;
+        AudioMusic.src = url;
+        AudioMusic.play();
+        $('#MusicSelect').get(0).dataset.type = 'false';
+        $('#MusicSelect').slideUp();
+    });
+
+
+
+
+</script>
+</body>
+
+</html>

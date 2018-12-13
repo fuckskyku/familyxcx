@@ -1,0 +1,77 @@
+.music {
+  position: absolute;
+  z-index: 99;
+  -webkit-animation-iteration-count: infinite;
+}
+/* 旋转class */
+.music-on {
+  animation: music-rotate 4s linear infinite;
+}
+/* 旋转动画 */
+@keyframes music-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.musiclist{
+  position: absolute; 
+  right: 20rpx; 
+  top: 168rpx; 
+  font-size: 32rpx;
+}
+.musiclistNone{
+  position: absolute; 
+  right: 20rpx; 
+  top: 168rpx; 
+  font-size: 32rpx;
+  display: none;
+}
+.musicitem{
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  background-size: 100rpx 100rpx;
+  color:#FFFFFF;
+  width:100rpx;
+  height:100rpx;
+  margin-top:20px;
+}
+@keyframes around {
+  from {
+   margin-left: 100%;
+  }
+  to {
+   /* var接受传入的变量 */
+   margin-left: var(--marqueeWidth--);
+  }
+ }
+ 
+.marquee_container{
+  height: 100rpx;
+  line-height: 40rpx;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.marquee_container:hover{
+  /* 不起作用 */
+  animation-play-state: paused;
+}
+.marquee_text{
+  color:#000;
+  font-size: 28rpx;
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: around;
+  animation-duration: 10s;  /*过渡时间*/
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+  width: 100%;  
+}

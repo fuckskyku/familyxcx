@@ -1,0 +1,62 @@
+/* pages/theEditor/theEditor.wxss */
+
+.editor{
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    padding-top: 50rpx;
+    border-top:1rpx solid #E5E5E5;
+}
+.theFirstStep{
+    font-size:42rpx;
+    font-weight:bold;
+}
+.theInput{
+    border-bottom: 2rpx solid #E5E5E5;
+    margin-top: 59rpx;
+    padding-bottom: 29rpx;
+}
+.name{
+    font-size:36rpx;
+    color: #808080;
+    font-weight:400;
+}
+.input1{
+    border-bottom: 2rpx solid #E5E5E5;
+    margin-bottom: 30rpx;
+    margin-top: 23px;
+}
+.chosen{
+    font-size:32rpx;
+    font-family:PingFang-SC-Regular;
+}
+.add{
+   width:90rpx;
+   display: flex;
+   flex-direction: column;
+   margin-top: 57rpx;
+   display: flex;
+   align-items: center;
+}
+.textAdd{
+   width:100rpx;
+   height: 60rpx;
+   background-color: #FFEA55;
+   border-radius: 10rpx;
+   font-size: 30rpx;
+   color: #000;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   float:right;
+}
+.theNextStep{
+    width:690rpx;
+     height:98rpx;
+     border-radius:10rpx;
+     background-color: #FFEA55;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 221rpx;
+     margin-bottom: 30rpx;
+}
