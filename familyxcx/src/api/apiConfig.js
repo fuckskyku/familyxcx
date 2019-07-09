@@ -27,6 +27,7 @@ fly.interceptors.response.use(
       mask: true,
     });
     // return
+    console.log("response.data",response.data)
     if (typeof (response.data) == 'string' && response.data != '') {
       response.data = JSON.parse(response.data);
     }

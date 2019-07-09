@@ -196,9 +196,6 @@ export default {
           this.isRun = true
         },500)
       }
-      
-
-      
     },
 
     del() {
