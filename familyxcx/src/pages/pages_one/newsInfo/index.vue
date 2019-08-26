@@ -87,7 +87,7 @@ export default {
   },
   onShareAppMessage: function(res) {
     return {
-      title: this.newsInfo.title + "_咪师校园",
+      title: this.newsInfo.title + "_喵喵校园",
       path: "pages/pages_one/newsInfo/main?id=" + this.id
     };
   }

@@ -5,7 +5,7 @@
       <div><img src="http://img.mseenet.com/iOS_CutDiagram/next@3x.png" alt=""></div>
     </div>
 
-    <div @click="bindViewTapAbout"> 关于咪师
+    <div @click="bindViewTapAbout"> 关于喵喵
       <div><img src="http://img.mseenet.com/iOS_CutDiagram/next@3x.png" alt=""></div>
     </div>
     <button class="login_button" @click="doLogout">退出登录</button>

@@ -2,7 +2,7 @@
   <div id="setRevisePw" :style="{'height':height + 'rpx'}">
     <div class="setRevisePw_container">
       <div class="container_item">
-        <div class="title">咪师帐号</div>
+        <div class="title">喵喵帐号</div>
         <input type="text" v-model="userMobile" disabled>
         <!-- <div class="text"></div> -->
       </div>
@@ -135,7 +135,7 @@ export default {
       wx.showModal({
         title: "确认手机号码",
         content:
-          "你的咪师当前已经绑定手机号，可通过短信验证码重置咪师密码。即将发送验证码到:" +
+          "你的喵喵当前已经绑定手机号，可通过短信验证码重置喵喵密码。即将发送验证码到:" +
           _this.userMobile,
         success: function(res) {
           if (res.confirm) {

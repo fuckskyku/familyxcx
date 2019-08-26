@@ -185,7 +185,7 @@ export default {
   //分享
   onShareAppMessage: function(res) {
     return {
-      title: this.storeInfo.storeName || '咪师校园',
+      title: this.storeInfo.storeName || '喵喵校园',
       path: 'pages/pages_one/index/main'
     }
   }

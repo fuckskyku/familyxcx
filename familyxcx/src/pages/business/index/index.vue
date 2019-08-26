@@ -288,7 +288,7 @@ export default {
   },
   onShareAppMessage: function(res) {
     return {
-      title: "咪师教育",
+      title: "喵喵教育",
       path: "pages/business/index/main"
     };
   }

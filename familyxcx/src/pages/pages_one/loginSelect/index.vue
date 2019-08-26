@@ -137,7 +137,7 @@ export default {
   },
   onShareAppMessage: function(res) {
     return {
-      title: '咪师校园',
+      title: '喵喵校园',
       path: 'pages/pages_one/index/main'
     }
   }

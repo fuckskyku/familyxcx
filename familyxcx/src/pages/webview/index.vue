@@ -22,7 +22,7 @@ export default {
     var that = this;
     that.url = this.$mp.query.url;
     // wx.setNavigationBarTitle({
-    //   title: "咪师校园" //页面标题
+    //   title: "喵喵校园" //页面标题
     // });
   },
   components: {
@@ -33,7 +33,7 @@ export default {
 
   onShareAppMessage: function(res) {
     return {
-      title: "咪师校园",
+      title: "喵喵校园",
       path: "pages/welcome/main"
     };
   }

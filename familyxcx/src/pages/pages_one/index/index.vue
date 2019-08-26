@@ -128,7 +128,7 @@ export default {
     //判断是教师还是家长显示不同的tab列表
     this.getIndexInfo();
     wx.setNavigationBarTitle({
-      title: this.family.schoolName || "咪师校园" //页面标题 显示学校名称
+      title: this.family.schoolName || "喵喵校园" //页面标题 显示学校名称
     });
     // var _this = this
     // console.log(this.info.length)
@@ -315,7 +315,7 @@ export default {
   //转发
   onShareAppMessage: function(res) {
     return {
-      title: "咪师校园",
+      title: "喵喵校园",
       path: "pages/welcome/main"
     };
   }

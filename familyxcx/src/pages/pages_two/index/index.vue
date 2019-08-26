@@ -106,7 +106,7 @@ export default {
   },
   mounted() {
         wx.setNavigationBarTitle({
-      title: this.family.schoolName || "咪师校园" //页面标题 显示学校名称
+      title: this.family.schoolName || "喵喵校园" //页面标题 显示学校名称
     });
    
     this.getIndexInfo();
@@ -259,7 +259,7 @@ export default {
   },
   onShareAppMessage: function(res) {
     return {
-      title: "教师端_咪师校园",
+      title: "教师端_喵喵校园",
       path: "/pages/pages_two/index/main"
     };
   }

@@ -186,7 +186,7 @@ export default {
   },
   onShareAppMessage: function(res) {
     return {
-      title: this.storeInfo.storeName || "咪师教育",
+      title: this.storeInfo.storeName || "喵喵教育",
       path: "pages/business/trainDetail/main?storeId=" + this.storeId
     };
   }

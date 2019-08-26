@@ -57,8 +57,8 @@
     <checkbox-group @change="checkboxChange">
       <div class="login_agreement">
         <checkbox :checked='checkboxBoole' :value='checkboxBoole' />我已阅读并同意<br>
-         <a @click="registerAgreement()">《咪师校园用户注册协议》</a><br>
-        <a @click="useAgreement()">《咪师校园使用协议》</a>
+         <a @click="registerAgreement()">《喵喵校园用户注册协议》</a><br>
+        <a @click="useAgreement()">《喵喵校园使用协议》</a>
       </div>
     </checkbox-group>
 

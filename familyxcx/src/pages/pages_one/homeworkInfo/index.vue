@@ -69,7 +69,7 @@ export default {
   },
   onShareAppMessage: function(res) {
     return {
-      title: this.homeworkInfo.title + '_咪师校园',
+      title: this.homeworkInfo.title + '_喵喵校园',
       path:
         'pages/pages_one/homeworkInfo/main?id=' +
         this.id +

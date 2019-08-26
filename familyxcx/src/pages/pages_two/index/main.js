@@ -7,7 +7,7 @@ app.$mount()
 
 export default {
     config: {
-        navigationBarTitleText: '咪师校园',
+        navigationBarTitleText: '喵喵校园',
         "enablePullDownRefresh": true,
     }
 }

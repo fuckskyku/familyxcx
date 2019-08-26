@@ -40,8 +40,8 @@
       </div> -->
       <div class="login_agreement" v-if="loginType==2">
         <checkbox :checked='checkboxBoole' :value='checkboxBoole' />我已阅读并同意
-        <a @click="registerAgreement()">《咪师校园用户注册协议》</a><br>
-        <a @click="useAgreement()">《咪师校园使用协议》</a>
+        <a @click="registerAgreement()">《喵喵校园用户注册协议》</a><br>
+        <a @click="useAgreement()">《喵喵校园使用协议》</a>
       </div>
     </checkbox-group>
     <div class="forget_password" v-if="loginType==1" @click="forgetPassword">忘记密码?</div>
@@ -306,7 +306,7 @@ export default {
   //分享
   onShareAppMessage: function(res) {
     return {
-      title: '咪师校园',
+      title: '喵喵校园',
       path: 'pages/welcome/main'
     }
   }

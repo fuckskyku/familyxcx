@@ -80,7 +80,7 @@ export default {
     window: {
       backgroundTextStyle: 'dark',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: '咪师校园',
+      navigationBarTitleText: '喵喵校园',
       navigationBarTextStyle: 'black',
       // enablePullDownRefresh: true
     }

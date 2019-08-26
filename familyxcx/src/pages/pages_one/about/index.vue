@@ -2,7 +2,7 @@
   <div id="about" :style="{'height': height + 'rpx'}">
     <div class="about_logo">
       <div><img src="http://img.mseenet.com/iOS_CutDiagram/logo.png" alt=""></div>
-      <div>咪师校园 版本号:1.9.1</div>
+      <div>喵喵校园 版本号:1.9.1</div>
     </div>
     <div class="about_item">
       <div class="name">联系方式</div>
